@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Titanic Survival</title>
+    <link rel="icon" href="#">
+    <link rel="stylesheet" type="text/css" href="./static/style.css">
+
+   
+</head>
+<body>
+    <div class="page-container">
+        <form action="" method="POST">
+            {{ form.csrf_token }}
+        <div class="page-header">Would you survive the Titanic?</div>
+
+        <div class="page-body">
+            <div class="body-row">
+                <div class="body-col">
+                    <p class="body-text">Sex</p> 
+                    <label class="user_inputs" for="sex">Select a sex:</label>
+                    <div class="group">
+                        <input type="radio" name="sex" id="male" value="0" /> 
+                        <label class="user_inputs" for="male">Male</label>
+                        <input type="radio" name="sex" id="female" value="1" />
+                        <label class="user_inputs" for="female">Female</label> 
+                    </div>
+                </div>
+
+                <div class="body-col">
+                    <p class="body-text">Class</p>
+                    <label class="user_inputs" for="pclass">Select a passenger class:</label>
+                    <div class="group">
+                        <select name="pclass" id="pclass" required="required">
+                            <option value="1">First</option>
+                            <option value="2">Second</option>
+                            <option value="3">Third</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="body-row">
+                <div class="body-col">
+                    <p class="body-text">Age</p>
+                        <label class="user_inputs" for="age">Enter your age: </label>
+                        <div class="group">
+                            <input type="text" name="age" id="age" required>
+                        </div>
+                </div>
+
+                <div class="body-col">
+                    <p class="body-text">Travelers</p>
+                        <label class="user_inputs" for="sibsp">Number in your traveling party:</label>
+                        <div class="group">
+                            <input type="text" name="sibsp" id="sibsp" required>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-results">
+            <hr>
+            <button class="results-button">Find Out!</button>
+            <br>
+            <h2 class="h2">{{ x_user[0] }}</h2>
+            <p class="results-text">Chances of Survival:</p>
+            <p class="result">{{ "%.1f" | format(prob) }}%</p>
+        </div>
+        <br>
+        <br>
+        <div class="page-footer">
+            <span class="f6 f-text">Jenna Shinn -
+            <a class="i" href="https://github.com/jennashinn">GitHub</a></span>
+        </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
+
+
+<!-- style="font-size: 85px" -->

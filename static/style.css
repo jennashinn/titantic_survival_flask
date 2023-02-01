@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+}
+
+.page-container {
+    background: linear-gradient(181.2deg, rgb(181, 239, 249) 10.5%, rgb(254, 254, 254) 86.8%);
+    font-family: "Century Gothic";
+    /* border: 1px solid rgb(255, 0, 191); */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 32px;
+}
+
+.page-header {
+    color: #233142;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    /* border: 1px solid  rgb(255, 0, 191); */
+}
+
+p, .text {
+   color:#233142; 
+   font-weight: 700;
+   font-size: 16px;
+}
+
+.page-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.body-row {
+    flex: 1;
+    display: flex;
+}
+
+.body-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .body-text {
+    /* font-size: 16px;
+    color:#233142; 
+    font-weight: 700; */
+
+
+.group {
+    font-family: "Century Gothic";
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-results {
+    font-family: "Century Gothic";
+    /* border: 1px solid  rgb(255, 0, 191); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.results-button{  
+    font-family: "Century Gothic";
+    border: 0;
+    line-height: 2;
+    padding: 0 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    text-align: center;
+    color:   #a9eee6;
+    background-color:#233142;
+}
+
+
+.page-footer {
+    color: #233142;
+    text-align: center;
+  }
+
+/* .footer-text {
+    font-family: "Century Gothic";
+    font-size: 16px;
+} */
+
+.result {
+    font-family: "Century Gothic";
+    font-size: 20px;
+    color: #233142;
+    font-weight: bold;
+}
